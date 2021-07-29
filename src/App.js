@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+import { Container } from 'reactstrap';
+import {Link } from "react-router-dom";
+
+import MiniMax from "./Components/MiniMax";
+import TwoPlayer from "./Components/TwoPlayer";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="p-5">
+      <div className="App">
+        <h1 className="text-center">Tic Tac Toe</h1>
+          <Link to="/twoplayer">
+            <button type="button" className="btn btn-outline-info m-2 p-2">
+              2 Player
+            </button>
+          </Link>
+          <Link to="/computer">
+            <button type="button" className="btn btn-outline-info m-2 p-2">
+              With Computer
+            </button>
+          </Link>
+      </div>
+    </Container>
   );
 }
 
